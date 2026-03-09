@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --loyal-blue: rgb(0, 65, 101);
+  --blissful-blue: rgb(0 96 148);
+  --true-maroon: rgb(119, 36, 50);
+  --cool-gray: rgb(169, 178, 177);
+  --happy-yellow: rgb(242, 223, 116);
+  --gradient-loyal-blissful: linear-gradient(to left, var(--blissful-blue), var(--loyal-blue));
 }
 
 @theme inline {
+  --color-loyal-blue: var(--loyal-blue);
+  --color-blissful-blue: var(--blissful-blue);
+  --color-true-maroon: var(--true-maroon);
+  --color-cool-gray: var(--cool-gray);
+  --color-happy-yellow: var(--happy-yellow);
+  --color-gradient-loyal-blissful: var(--gradient-loyal-blissful);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    @apply text-foreground bg-background;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montserrat);
+  }
+
+  h1 {
+    @apply text-4xl sm:text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  h4 {
+    @apply text-xl font-semibold;
+  }
+
+  h5 {
+    @apply text-lg font-semibold;
+  }
+
+  h6 {
+    @apply text-base font-semibold;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer components {
+  #primary-button {
+    @apply bg-red-600 flex w-fit cursor-pointer  rounded-full border px-8 py-3.5 max-sm:w-full text-center;
+  }
+
+  header {
+    @apply sticky top-0 z-50;
+
+    nav {
+      @apply flex flex-row justify-between mx-auto container sm:px-10 px-5 py-4;
+    }
+
+    .logo {
+      @apply flex flex-row items-center gap-3;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-gradient-loyal-blissful {
+    background-image: var(--gradient-loyal-blissful);
+  }
 }
