@@ -35,7 +35,14 @@ export function ContactForm() {
       }
     } catch (err) {
       console.error(err);
-      toast.error('Failed to submit form. Please try again.');
+      const message = err instanceof Error ? err.message : '';
+      const isTurnstileError = message.toLowerCase().includes('turnstile');
+
+      toast.error(
+        isTurnstileError
+          ? 'Security verification failed. Please complete the CAPTCHA again and resubmit.'
+          : 'Failed to submit form. Please try again.'
+      );
       
       // Reset Turnstile widget on error too
       if (typeof window !== 'undefined' && (window as any).turnstile) {

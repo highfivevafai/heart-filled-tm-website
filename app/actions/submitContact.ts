@@ -35,7 +35,19 @@ export async function submitContact(formData: FormData) {
   });
 
   const verifyData = await verifyRes.json();
-  if (!verifyData.success) throw new Error('Failed Turnstile verification');
+  if (!verifyData.success) {
+    const errorCodes = Array.isArray(verifyData['error-codes'])
+      ? verifyData['error-codes'].join(', ')
+      : 'unknown_error';
+
+    console.error('Turnstile verification failed:', {
+      errorCodes,
+      hostname: verifyData.hostname,
+      action: verifyData.action,
+    });
+
+    throw new Error(`Turnstile verification failed: ${errorCodes}`);
+  }
 
   // 3️⃣ Submission ID
   const submissionId = crypto.randomUUID();

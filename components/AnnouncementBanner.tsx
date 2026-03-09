@@ -5,7 +5,8 @@ const AnnouncementBanner = () => {
     <Link 
       href="/visit-our-club" 
       className="block bg-gradient-loyal-blissful text-white py-3 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all cursor-pointer"
-      aria-label="Visit our club - Meetings every Thursday, 7:00 PM – 8:30 PM"
+      aria-label="Visit our club - Thursday Meetings, 7:00 PM - 8:30 PM"
+      title="Thursday Meetings, 7:00 PM - 8:30 PM"
     >
       <div className="container max-w-7xl px-8 mx-auto flex flex-row items-center justify-center gap-3 md:gap-6 text-center sm:text-left">
         {/* Badge */}
@@ -18,7 +19,8 @@ const AnnouncementBanner = () => {
         {/* Meeting Information */}
         <div className="flex-grow">
           <p className="text-xs sm:text-base font-medium text-white/90">
-            Meetings every Thursday, 7:00 PM – 8:30 PM<span className="hidden md:inline">, Woodland Hills, CA</span>
+            Thursday Meetings, <time dateTime="19:00">7:00 PM</time> - <time dateTime="20:30">8:30 PM</time>
+            <span className="hidden md:inline">, Woodland Hills, CA</span>
           </p>
         </div>
 
