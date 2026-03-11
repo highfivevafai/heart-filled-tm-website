@@ -148,7 +148,7 @@ const VisitOurClubPage = () => {
                 <BriefcaseIcon className="h-8 w-8 text-gray-700" />
               </div> 
               <h2 className="text-xl font-bold mb-2">What to Bring</h2>
-              <p className="text-gray-600 mb-4">Just yourself and an open mind!</p>
+              <p className="text-gray-600 mb-4">We recommend bringing a pen and paper in case you would like to take notes.</p>
             </div>
             <div className="relative border border-slate-300 p-8 text-center">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-6 bg-white px-2 py-2">
@@ -322,7 +322,7 @@ const VisitOurClubPage = () => {
                     </div>
                     <span className="absolute top-0 right-0 text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 md:hidden">5 mins</span>
                     <p className="text-gray-600">
-                      The meeting starts with a warm welcome from the President or Toastmaster. Guests are introduced and given a brief overview of what to expect during the meeting.
+                      The meeting begins with the President's opening remarks and guest introductions. The Toastmaster then presents the meeting agenda and introduces the functionary roles.
                     </p>
                   </div>
                 </div>
@@ -343,7 +343,7 @@ const VisitOurClubPage = () => {
                     </div>
                     <span className="absolute top-0 right-0 text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 md:hidden">15-20 mins</span>
                     <p className="text-gray-600">
-                      Members deliver speeches they've prepared in advance, ranging from 5-7 minutes. These speeches are part of the Toastmasters Pathways learning program and cover various topics and objectives.
+                      Members deliver 5-7 minute speeches they have signed up for as part of the Toastmasters Pathways learning program, covering a variety of topics and objectives.
                     </p>
                   </div>
                 </div>
@@ -402,11 +402,32 @@ const VisitOurClubPage = () => {
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-xl font-semibold text-gray-900">Functionary Reports</h3>
-                      <span className="text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 ml-2 hidden md:inline">5-10 mins</span>
+                      <span className="text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 ml-2 hidden md:inline">5 mins</span>
                     </div>
-                    <span className="absolute top-0 right-0 text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 md:hidden">5-10 mins</span>
+                    <span className="absolute top-0 right-0 text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 md:hidden">5 mins</span>
                     <p className="text-gray-600">
                       Meeting functionaries (Timer, Ah-Counter, Grammarian) provide their reports, highlighting time management, filler words, and notable word usage. These reports help all participants improve their speaking skills.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* General Evaluation */}
+              <div className="bg-white p-6 border border-slate-200" style={{ background: "linear-gradient(to right, #f1f5f9, #f8fafc)" }}>
+                <div className="relative flex flex-col md:flex-row md:items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-blissful-blue/10 rounded-full flex items-center justify-center">
+                      <CalendarIcon className="w-6 h-6 text-blissful-blue" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-xl font-semibold text-gray-900">General Evaluation</h3>
+                      <span className="text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 ml-2 hidden md:inline">5 mins</span>
+                    </div>
+                    <span className="absolute top-0 right-0 text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 md:hidden">5 mins</span>
+                    <p className="text-gray-600">
+                      The General Evaluator provides an overview of the meeting's quality and flow, sharing key observations and suggestions that support continuous improvement.
                     </p>
                   </div>
                 </div>
@@ -423,9 +444,9 @@ const VisitOurClubPage = () => {
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-xl font-semibold text-gray-900">Wrap-up & Networking</h3>
-                      <span className="text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 ml-2 hidden md:inline">10 mins</span>
+                      <span className="text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 ml-2 hidden md:inline">5 mins</span>
                     </div>
-                    <span className="absolute top-0 right-0 text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 md:hidden">10 mins</span>
+                    <span className="absolute top-0 right-0 text-sm text-gray-500 font-medium whitespace-nowrap flex-shrink-0 md:hidden">5 mins</span>
                     <p className="text-gray-600">
                       The meeting wraps up with final announcements. Guests are welcome to stay afterward to meet members, ask questions, and learn more about joining.
                     </p>

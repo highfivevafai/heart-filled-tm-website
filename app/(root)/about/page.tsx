@@ -64,7 +64,7 @@ const AboutPage = () => {
               </h2>
 
               <p className="text-lg text-gray-600 mb-4">
-                Founded in 2020, Heart Filled Toastmasters was created with a simple yet powerful vision: to provide a welcoming space where individuals can develop their communication and leadership skills in a supportive, encouraging environment.
+                Charted in 2019, Heart Filled Toastmasters was created with a simple yet powerful vision: to provide a welcoming space where individuals can develop their communication and leadership skills in a supportive, encouraging environment.
               </p>
 
               <p className="text-lg text-gray-600 mb-4">
@@ -109,7 +109,7 @@ const AboutPage = () => {
               {
                 date: "2021",
                 title: "Growing Our Community",
-                description: "As our membership grew, we expanded our programs and welcomed members from diverse backgrounds. We established ourselves as a welcoming club where everyone's voice is valued and celebrated.",
+                description: "As our membership grew, we expanded our programs and welcomed members beyond the St. Mel's Church. We established ourselves as a welcoming club where everyone's voice is valued and celebrated.",
                 image: {
                   src: "/growing-community.jpg",
                   alt: "Members speaking at a Heart Filled Toastmasters meeting",
@@ -187,7 +187,7 @@ const AboutPage = () => {
                 Community
               </h3>
               <p className="text-gray-600">
-                We foster genuine connections and lasting friendships among members from diverse backgrounds.
+                We foster genuine connections and lasting friendships among members beyond the St. Mel's Church.
               </p>
             </div>
 

@@ -12,24 +12,24 @@ import { CheckIcon, CheckBadgeIcon, CalendarIcon, ComputerDesktopIcon, ClockIcon
 const HomePage = () => {
   const faqs = [
     {
-      title: "Is the club online or in-person?",
-      content: "Our club meets in person most Thursdays from 7:00 to 8:30 PM, with one online meeting per month via Zoom. This gives members the flexibility to join from anywhere while keeping our meetings engaging and supportive, just like in-person sessions."
+      title: "Do I need public speaking experience to join?",
+      content: "Not at all! Heart Filled Toastmasters welcomes members of all skill levels, from complete beginners to experienced speakers. Our supportive environment is designed to help you grow from wherever you're starting."
     },
     {
-      title: "Will I have to speak at my first meeting?",
-      content: "Absolutely not! Guests are welcome to simply watch on their first visit. We may ask your name and if you enjoyed your experience, but that's all. If you'd like to join in on Table Topics (impromptu speaking), it's completely optional, you can go at your own pace."
+      title: "What is the time commitment?",
+      content: "Our meetings are held every Thursday from 7:00 to 8:30 PM. Many members spend an extra hour or more per week preparing speeches or working on Pathways projects, but the time is completely up to you - you get out what you put in."
     },
     {
-      title: "Can I visit multiple times before joining?",
-      content: "Yes! Guests are welcome to attend up to two meetings for free before deciding whether to join. This gives you a chance to experience our club culture and see if it's the right fit for you."
+      title: "How diverse is the club membership?",
+      content: "Our club brings together people from various professional backgrounds, age groups, and experience levels. This diversity enriches our learning experience and helps members connect with people they might not otherwise meet."
     },
     {
-      title: "Do I need to RSVP before attending?",
-      content: <>It's not required, but we recommend letting us know you're coming. A quick <a href="/contact" className="underline">RSVP</a> helps us prepare for guests and ensures someone can greet you when you arrive.</>
+      title: "How much does membership cost?",
+      content: "Members pay Toastmasters International dues, with a one-time $20 new member fee. Semi-annual dues are approximately $60 (subject to change) and include access to all club meetings and the Pathways learning platform."
     },
     {
-      title: "What should I wear to a meeting?",
-      content: "Dress is casual to business casual. The most important thing is that you feel comfortable and confident while participating."
+      title: "What are the benefits of joining Heart Filled Toastmasters?",
+      content: "Members report increased confidence in public speaking, improved leadership skills, better communication in professional settings, expanded networks, and personal growth. Many also find lasting friendships and a supportive community that extends beyond meetings."
     }
   ];
   return (
@@ -226,7 +226,7 @@ const HomePage = () => {
               About Us
             </h2>
             <p className="text-lg text-gray-600 mb-4">
-              Established in 2021, Heart Filled Toastmasters helps people who want to become better speakers.            
+              Founded in 2019, Heart Filled Toastmasters helps people who want to become better speakers.            
             </p>
             <p className="text-lg text-gray-600 mb-8">
               Our club is guided by experienced members and mentors, with weekly in-person meetings and a monthly online meeting to support consistent growth.            
