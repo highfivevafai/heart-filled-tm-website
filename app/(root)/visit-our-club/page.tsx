@@ -148,7 +148,7 @@ const VisitOurClubPage = () => {
                 <BriefcaseIcon className="h-8 w-8 text-gray-700" />
               </div> 
               <h2 className="text-xl font-bold mb-2">What to Bring</h2>
-              <p className="text-gray-600 mb-4">We recommend bringing a pen and paper in case you would like to take notes.</p>
+              <p className="text-gray-600 mb-4">Bring a pen and paper if you’d like to take notes.</p>
             </div>
             <div className="relative border border-slate-300 p-8 text-center">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-6 bg-white px-2 py-2">

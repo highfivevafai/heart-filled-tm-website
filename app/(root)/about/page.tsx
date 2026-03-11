@@ -98,7 +98,7 @@ const AboutPage = () => {
           <Timeline
             items={[
               {
-                date: "2020",
+                date: "2019",
                 title: "A New Beginning",
                 description: "Heart Filled Toastmasters was founded with a vision to create a supportive space where individuals could develop their communication and leadership skills. We started with a small group of passionate members committed to personal growth.",
                 image: {
@@ -107,21 +107,21 @@ const AboutPage = () => {
                 },
               },
               {
-                date: "2021",
+                date: "2020",
+                title: "President's Distinguished Recognition",
+                description: "Our dedication paid off as Heart Filled Toastmasters first earned the prestigious President's Distinguished Club award in 2020 and has achieved it every year since, recognizing our excellence in member development, leadership training, and community impact.",
+                image: {
+                  src: "/president-distinguished-certification.jpg",
+                  alt: "Heart Filled Toastmasters mentorship and growth",
+                },
+              },
+              {
+                date: "2022",
                 title: "Growing Our Community",
                 description: "As our membership grew, we expanded our programs and welcomed members beyond the St. Mel's Church. We established ourselves as a welcoming club where everyone's voice is valued and celebrated.",
                 image: {
                   src: "/growing-community.jpg",
                   alt: "Members speaking at a Heart Filled Toastmasters meeting",
-                },
-              },
-              {
-                date: "2022",
-                title: "President's Distinguished Recognition",
-                description: "Our dedication paid off as Heart Filled Toastmasters first earned the prestigious President's Distinguished Club award in 2021 and has achieved it every year since, recognizing our excellence in member development, leadership training, and community impact.",
-                image: {
-                  src: "/president-distinguished-certification.jpg",
-                  alt: "Heart Filled Toastmasters mentorship and growth",
                 },
               },
               {
@@ -255,11 +255,11 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             
             {/* Achievement 1 */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center">
-              <div className="text-4xl font-bold text-white mb-2">
+              <div className="text-2xl font-bold text-white mb-2">
                 President's
               </div>
               <div className="text-xl font-semibold text-white/90 mb-2">
@@ -272,20 +272,22 @@ const AboutPage = () => {
 
             {/* Achievement 2 */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center">
-              <div className="text-4xl font-bold text-white mb-2">
+              <div className="text-2xl font-bold text-white mb-2">
                 Award
               </div>
               <div className="text-xl font-semibold text-white/90 mb-2">
                 Winning Speeches
               </div>
               <p className="text-white/80">
-                Our members have delivered award-winning speeches
+                2023 Inspirational speech winner
+                <br />
+                2023 Tall Tale speech winner
               </p>
             </div>
 
             {/* Achievement 3 */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center">
-              <div className="text-4xl font-bold text-white mb-2">
+              <div className="text-2xl font-bold text-white mb-2">
                 20+
               </div>
               <div className="text-xl font-semibold text-white/90 mb-2">
@@ -293,6 +295,19 @@ const AboutPage = () => {
               </div>
               <p className="text-white/80">
                 A thriving community of supportive and engaged speakers
+              </p>
+            </div>
+
+            {/* Achievement 4 */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center">
+              <div className="text-2xl font-bold text-white mb-2">
+                District Director
+              </div>
+              <div className="text-xl font-semibold text-white/90 mb-2">
+                2021-2022
+              </div>
+              <p className="text-white/80">
+                Proud Home of the 2021–2022 District Director
               </p>
             </div>
 
