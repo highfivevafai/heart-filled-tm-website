@@ -25,7 +25,7 @@ const HomePage = () => {
     },
     {
       title: "How much does membership cost?",
-      content: "Members pay Toastmasters International dues, with a one-time $20 new member fee. Semi-annual dues are approximately $60 (subject to change) and include access to all club meetings and the Pathways learning platform."
+      content: "Members pay Toastmasters International dues, with a one-time $20 new member fee. Semi-annual dues are $60 (subject to change) and include access to all club meetings and the Pathways learning platform."
     },
     {
       title: "What are the benefits of joining Heart Filled Toastmasters?",

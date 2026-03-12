@@ -279,9 +279,9 @@ const AboutPage = () => {
                 Winning Speeches
               </div>
               <p className="text-white/80">
-                2023 Inspirational speech winner
+                2024 Inspirational speech winner
                 <br />
-                2023 Tall Tale speech winner
+                2021 Tall Tale speech winner
               </p>
             </div>
 
