@@ -297,10 +297,10 @@ const HomePage = () => {
           {/* Left Column - 2 horizontal cards stacked */}
           <div className="w-full flex flex-col gap-6">
             <TestimonialCard
-              name="John Doe"
-              quote="Heart Filled Toastmasters gave me the confidence to speak in front of any audience."
-              image="/john-doe.png"
-              alt="Toastmasters member smiling"
+              name="Fred Vafai"
+              quote="Heart Filled Toastmasters has encouraged me to step out of my comfort zone and it's benefited my professional and personal life"
+              image="/2025-2026-heart-filled-president-fred.webp"
+              alt="Fred Vafai, President of Heart Filled Toastmasters Club 2025–2026"
               variant="horizontal"
             />
 

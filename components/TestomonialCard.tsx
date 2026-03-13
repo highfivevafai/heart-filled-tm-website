@@ -32,9 +32,9 @@ const TestimonialCard = ({
         />
 
         <div className="flex flex-col gap-2 flex-1">
-          <p className="text-gray-700 italic leading-relaxed">
-            “{quote}”
-          </p>
+          <blockquote cite="" className="text-gray-700 italic leading-relaxed m-0 p-0 border-0">
+            "{quote}"
+          </blockquote>
           <span className="font-semibold text-gray-900">
             — {name}
           </span>
