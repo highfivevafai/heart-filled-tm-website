@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import PrimaryButton from "@/components/PrimaryButton";
-import TestimonialCard from "@/components/TestomonialCard";
 import { Timeline } from "@/components/Timeline";
 import CallToAction from "@/components/CallToAction";
 import Image from "next/image";

@@ -305,9 +305,9 @@ const HomePage = () => {
             />
 
             <TestimonialCard
-              name="Alicia Lee"
-              quote="I love how welcoming and encouraging everyone is at every meeting."
-              image="/alicia-lee.png"
+              name="Steve Pinto"
+              quote="Better speaking, better listening, and better structure for clarity. Nice social atmosphere, too."
+              image="/steve-testimonial.webp"
               alt="Toastmasters member presenting"
               variant="horizontal"
             />
@@ -315,9 +315,9 @@ const HomePage = () => {
 
           {/* Right Column - vertical featured card */}
           <TestimonialCard
-            name="Jane Smith"
-            quote="Joining Heart Filled Toastmasters has completely changed how I approach public speaking. The encouragement, guidance, and friendly environment have helped me grow more than I ever imagined."
-            image="/jane-smith.png"
+            name="Tamara Singer"
+            quote="I look forward to going to Heart Filled Toastmasters every week for the camaraderie and friendship, inspiring speeches, and stimulating impromptu speaking. There's nothing like Toastmasters!"
+            image="/tami-testimonial.webp"
             alt="Toastmasters member giving speech"
             variant="vertical"
           />
