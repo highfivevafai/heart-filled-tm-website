@@ -32,8 +32,8 @@ const AboutPage = () => {
             {/* Right Image */}
             <div className="relative w-full lg:min-h-[400px] h-64 sm:h-80 md:h-96 lg:h-full">
               <Image
-                src="/about-us.png"
-                alt="Heart Filled Toastmasters meeting"
+                src="/st-mel-church.jpg"
+                alt="St Mel Church"
                 fill
                 className="object-cover rounded-md"
               />
@@ -50,7 +50,7 @@ const AboutPage = () => {
             {/* Left Image */}
             <div className="order-2 lg:order-1 relative w-full h-64 sm:h-80 md:h-96 lg:h-full">
               <Image
-                src="/how-we-help.jpg"
+                src="/our-heartfilled-story-3.webp"
                 alt="Heart Filled Toastmasters meeting"
                 fill
                 className="object-cover rounded-md"
@@ -102,7 +102,7 @@ const AboutPage = () => {
                 title: "A New Beginning",
                 description: "Heart Filled Toastmasters was founded with a vision to create a supportive space where individuals could develop their communication and leadership skills. We started with a small group of passionate members committed to personal growth.",
                 image: {
-                  src: "/st-mel-church.jpg",
+                  src: "/new-beginning.webp",
                   alt: "Heart Filled Toastmasters founding members",
                 },
               },
@@ -111,7 +111,7 @@ const AboutPage = () => {
                 title: "President's Distinguished Recognition",
                 description: "Our dedication paid off as Heart Filled Toastmasters first earned the prestigious President's Distinguished Club award in 2020 and has achieved it every year since, recognizing our excellence in member development, leadership training, and community impact.",
                 image: {
-                  src: "/president-distinguished-certification.jpg",
+                  src: "/president-distinguished-recognition.webp",
                   alt: "Heart Filled Toastmasters mentorship and growth",
                 },
               },
@@ -120,7 +120,7 @@ const AboutPage = () => {
                 title: "Growing Our Community",
                 description: "As our membership grew, we expanded our programs and welcomed members beyond the St. Mel's Church. We established ourselves as a welcoming club where everyone's voice is valued and celebrated.",
                 image: {
-                  src: "/growing-community.jpg",
+                  src: "/growing-community.webp",
                   alt: "Members speaking at a Heart Filled Toastmasters meeting",
                 },
               },
@@ -129,7 +129,7 @@ const AboutPage = () => {
                 title: "Empowering Leaders",
                 description: "We continue our mission to help members overcome their fear of public speaking, build confidence, and develop essential leadership skills. Our community remains committed to supporting each other's growth and celebrating every milestone.",
                 image: {
-                  src: "/leader-summit.jpg",
+                  src: "/empowering-leaders-today.webp",
                   alt: "Heart Filled Toastmasters community members",
                 },
               },
