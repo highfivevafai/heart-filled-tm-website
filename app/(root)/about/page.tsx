@@ -1,9 +1,35 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import PrimaryButton from "@/components/PrimaryButton";
 import { Timeline } from "@/components/Timeline";
 import CallToAction from "@/components/CallToAction";
 import Image from "next/image";
 import { CheckIcon, SparklesIcon, HeartIcon, UsersIcon, TrophyIcon, LightBulbIcon, RocketLaunchIcon } from '@heroicons/react/24/solid';
+import { siteConfig } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "About Heart Filled Toastmasters",
+  description:
+    "Learn about Heart Filled Toastmasters in Woodland Hills, our story since 2019, and how we help members build communication and leadership skills.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Heart Filled Toastmasters",
+    description:
+      "Discover the mission, values, and journey of Heart Filled Toastmasters in Woodland Hills, California.",
+    url: "/about",
+    images: [
+      {
+        url: "/open-graph-heart-filled-tm.png",
+        width: 1200,
+        height: 630,
+        alt: "About Heart Filled Toastmasters",
+      },
+    ],
+    siteName: siteConfig.name,
+  },
+};
 
 const AboutPage = () => {
   return (

@@ -1,4 +1,4 @@
-'use client';
+import type { Metadata } from "next";
 
 import Hero from "@/components/Hero";
 import PrimaryButton from "@/components/PrimaryButton";
@@ -6,6 +6,7 @@ import LocationMap from "@/components/LocationMap";
 import CallToAction from "@/components/CallToAction";
 import { Accordion } from "@/components/Accordion";
 import Image from "next/image";
+import { siteConfig, toAbsoluteUrl } from "@/lib/siteConfig";
 import { EnvelopeOpenIcon, BriefcaseIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 import {
   ClockIcon,
@@ -23,6 +24,67 @@ import {
   ChatBubbleOvalLeftEllipsisIcon,
   DocumentTextIcon
 } from '@heroicons/react/24/solid';
+
+export const metadata: Metadata = {
+  title: "Visit Our Club in Woodland Hills",
+  description:
+    "Plan your first Heart Filled Toastmasters visit at St. Mel Parish in Woodland Hills. Meetings run every Thursday from 7:00 PM to 8:30 PM.",
+  alternates: {
+    canonical: "/visit-our-club",
+  },
+  openGraph: {
+    title: "Visit Heart Filled Toastmasters in Woodland Hills",
+    description:
+      "Join our Thursday evening meetings at St. Mel Parish and experience a supportive Toastmasters club focused on public speaking and leadership.",
+    url: "/visit-our-club",
+    images: [
+      {
+        url: "/open-graph-heart-filled-tm.png",
+        width: 1200,
+        height: 630,
+        alt: "Visit Heart Filled Toastmasters in Woodland Hills, CA",
+      },
+    ],
+  },
+};
+
+const weeklyMeetingEventSchema = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "Heart Filled Toastmasters Weekly Meeting",
+  description:
+    "Weekly Toastmasters meeting focused on public speaking, communication, and leadership development.",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  image: [toAbsoluteUrl("/open-graph-heart-filled-tm.png")],
+  organizer: {
+    "@type": "Organization",
+    name: siteConfig.name,
+    url: siteConfig.baseUrl,
+    email: siteConfig.email,
+  },
+  location: {
+    "@type": "Place",
+    name: siteConfig.location.venue,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.location.streetAddress,
+      addressLocality: siteConfig.location.city,
+      addressRegion: siteConfig.location.region,
+      postalCode: siteConfig.location.postalCode,
+      addressCountry: siteConfig.location.country,
+    },
+  },
+  eventSchedule: {
+    "@type": "Schedule",
+    repeatFrequency: "P1W",
+    byDay: "https://schema.org/Thursday",
+    startTime: siteConfig.meeting.startTime,
+    endTime: siteConfig.meeting.endTime,
+    scheduleTimezone: siteConfig.meeting.timezone,
+  },
+  url: `${siteConfig.baseUrl}/visit-our-club`,
+};
 
 const VisitOurClubPage = () => {
   const faqs = [
@@ -49,6 +111,10 @@ const VisitOurClubPage = () => {
   ];
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(weeklyMeetingEventSchema) }}
+      />
           {/* Hero Section */}
           <section className="py-20 bg-slate-50">
             <div className="container max-w-7xl mx-auto px-8">

@@ -1,10 +1,60 @@
+import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { CalendarIcon, MapPinIcon, EnvelopeOpenIcon, CheckIcon } from '@heroicons/react/24/solid';
 import Image from "next/image";
+import { siteConfig } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "Contact Heart Filled Toastmasters",
+  description:
+    "Contact Heart Filled Toastmasters to RSVP, ask questions, and learn more about weekly meetings in Woodland Hills.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Heart Filled Toastmasters",
+    description:
+      "Reach out to Heart Filled Toastmasters in Woodland Hills, CA to plan your visit and connect with our club.",
+    url: "/contact",
+    images: [
+      {
+        url: "/open-graph-heart-filled-tm.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Heart Filled Toastmasters",
+      },
+    ],
+  },
+};
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: `Contact ${siteConfig.name}`,
+  url: `${siteConfig.baseUrl}/contact`,
+  description:
+    "Contact page for Heart Filled Toastmasters in Woodland Hills, California.",
+  mainEntity: {
+    "@type": "Organization",
+    name: siteConfig.name,
+    email: siteConfig.email,
+    url: siteConfig.baseUrl,
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: siteConfig.email,
+      contactType: "customer support",
+      availableLanguage: ["English"],
+    },
+  },
+};
 
 const ContactPage = () => {
   return (
     <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+    />
     <section className="py-20 bg-slate-50 min-h-screen">
       <div className="container max-w-7xl mx-auto px-8">
         <div className="mb-12 text-center">

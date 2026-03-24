@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import AnimatedWord from "@/components/AnimatedWord";
 import PrimaryButton from "@/components/PrimaryButton";
@@ -8,6 +9,65 @@ import CallToAction from "@/components/CallToAction";
 import { Accordion } from "@/components/Accordion";
 import Image from "next/image";
 import { CheckIcon, CheckBadgeIcon, CalendarIcon, ComputerDesktopIcon, ClockIcon, MapPinIcon, EnvelopeIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/solid';
+import { siteConfig, toAbsoluteUrl } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Heart Filled Toastmasters | Public Speaking & Leadership in Woodland Hills, CA",
+  },
+  description:
+    "Build confidence and communication skills at Heart Filled Toastmasters in Woodland Hills, CA. Join our supportive community every Thursday at 7:00 PM at St. Mel Parish. All skill levels welcome!",
+  keywords: [
+    "Public Speaking Woodland Hills",
+    "Leadership Training San Fernando Valley",
+    "Toastmasters near me",
+  ],
+  openGraph: {
+    title: "Heart Filled Toastmasters | Public Speaking & Leadership in Woodland Hills, CA",
+    description:
+      "Build confidence and communication skills at Heart Filled Toastmasters in Woodland Hills, CA. Join our supportive community every Thursday at 7:00 PM at St. Mel Parish. All skill levels welcome!",
+    url: "/",
+    images: [
+      {
+        url: "/open-graph-heart-filled-tm.png",
+        width: 1200,
+        height: 630,
+        alt: "Heart Filled Toastmasters club members in Woodland Hills, California",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "/",
+  },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  additionalType: "https://schema.org/SocialClub",
+  name: siteConfig.name,
+  url: siteConfig.baseUrl,
+  image: toAbsoluteUrl("/open-graph-heart-filled-tm.png"),
+  email: siteConfig.email,
+  areaServed: "San Fernando Valley",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.location.streetAddress,
+    addressLocality: siteConfig.location.city,
+    addressRegion: siteConfig.location.region,
+    postalCode: siteConfig.location.postalCode,
+    addressCountry: siteConfig.location.country,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "https://schema.org/Thursday",
+      opens: siteConfig.meeting.startTime,
+      closes: siteConfig.meeting.endTime,
+    },
+  ],
+  sameAs: [siteConfig.socialProfiles.facebook, siteConfig.socialProfiles.meetup],
+};
 
 const HomePage = () => {
   const faqs = [
@@ -34,6 +94,10 @@ const HomePage = () => {
   ];
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <Hero
         heading={<div className="text-center"><>Speak with Confidence. <br />Lead with <span className='inline-block text-left'><span className='hidden md:inline-block'><AnimatedWord words={['Clarity', 'Impact', 'Heart']} duration={3} suffix={<span className='text-blissful-blue'>.</span>} /></span><span className='md:hidden'>Clarity<span className='text-blissful-blue'>.</span></span></span></></div>}
         description="Join us to grow your public speaking and leadership skills."
