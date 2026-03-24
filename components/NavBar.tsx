@@ -9,7 +9,6 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
-  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
   const prevActiveElRef = useRef<HTMLElement | null>(null);
 
@@ -57,8 +56,6 @@ export default function Navbar() {
       prevActiveElRef.current = document.activeElement as HTMLElement | null;
       document.body.style.overflow = "hidden";
       document.addEventListener("keydown", onKeyDown);
-      // focus the close button when opening
-      setTimeout(() => closeButtonRef.current?.focus(), 0);
     } else {
       document.body.style.overflow = "";
       document.removeEventListener("keydown", onKeyDown);
@@ -145,10 +142,10 @@ export default function Navbar() {
                   isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
                 } lg:hidden z-[10001]`}
               >
-                <div className="flex flex-row items-center border-b pb-4">
+                <div className="flex flex-row items-center justify-between border-b pe-4">
                   <Link
                     href="/"
-                    className="cursor-pointer pt-4 ps-4"
+                    className="cursor-pointer py-4 ps-4"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <Image 
@@ -160,13 +157,15 @@ export default function Navbar() {
                     />
                   </Link>
                   <button
-                    ref={closeButtonRef}
                     onClick={toggleMobileMenu}
-                    className="absolute top-4 right-4 text-slate-700 hover:text-slate-900"
+                    className="inline-flex h-12 w-12 items-center justify-center text-slate-700 hover:text-slate-900"
+                    aria-label="Close mobile menu"
+                    type="button"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-8 h-8"
+                      viewBox="0 0 24 24"
+                      className="block h-6 w-6"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"

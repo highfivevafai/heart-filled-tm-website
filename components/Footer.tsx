@@ -10,14 +10,16 @@ const Footer = () => {
           <div className="grid grid-cols-1 lg:grid-cols-4 items-center gap-4 md:gap-8">
             {/* Logo - Left */}
             <div className="flex justify-center lg:justify-start flex-shrink-0">
-              <Image
-                src="/icons/toastmasters-watermark-logo.svg"
-                alt="Toastmasters Logo"
-                width={200}
-                height={60}
-                className="opacity-80 hover:opacity-100 transition"
-                priority
-              />
+              <Link href="/" aria-label="Go to homepage">
+                <Image
+                  src="/icons/toastmasters-watermark-logo.svg"
+                  alt="Toastmasters Logo"
+                  width={200}
+                  height={60}
+                  className="opacity-80 hover:opacity-100 transition"
+                  priority
+                />
+              </Link>
             </div>
 
             {/* Links - Center (spans 2 columns on large screens) */}
