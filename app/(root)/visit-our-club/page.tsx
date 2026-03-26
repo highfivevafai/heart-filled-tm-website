@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import Hero from "@/components/Hero";
 import PrimaryButton from "@/components/PrimaryButton";
 import LocationMap from "@/components/LocationMap";
 import CallToAction from "@/components/CallToAction";
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
     url: "/visit-our-club",
     images: [
       {
-        url: "/open-graph-heart-filled-tm.png",
+        url: "/heart-filled-toastmasters-open-graph.png",
         width: 1200,
         height: 630,
         alt: "Visit Heart Filled Toastmasters in Woodland Hills, CA",
@@ -56,7 +55,7 @@ const weeklyMeetingEventSchema = {
     "Weekly Toastmasters meeting focused on public speaking, communication, and leadership development.",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   eventStatus: "https://schema.org/EventScheduled",
-  image: [toAbsoluteUrl("/open-graph-heart-filled-tm.png")],
+  image: [toAbsoluteUrl("/heart-filled-toastmasters-open-graph.png")],
   organizer: {
     "@type": "Organization",
     name: siteConfig.name,

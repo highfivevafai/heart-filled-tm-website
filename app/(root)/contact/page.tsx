@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "/contact",
     images: [
       {
-        url: "/open-graph-heart-filled-tm.png",
+        url: "/heart-filled-toastmasters-open-graph.png",
         width: 1200,
         height: 630,
         alt: "Contact Heart Filled Toastmasters",

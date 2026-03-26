@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Hero from "@/components/Hero";
 import PrimaryButton from "@/components/PrimaryButton";
 import { Timeline } from "@/components/Timeline";
 import CallToAction from "@/components/CallToAction";
 import Image from "next/image";
-import { CheckIcon, SparklesIcon, HeartIcon, UsersIcon, TrophyIcon, LightBulbIcon, RocketLaunchIcon } from '@heroicons/react/24/solid';
+import { SparklesIcon, HeartIcon, UsersIcon, TrophyIcon, LightBulbIcon, RocketLaunchIcon } from '@heroicons/react/24/solid';
 import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
     url: "/about",
     images: [
       {
-        url: "/open-graph-heart-filled-tm.png",
+        url: "/heart-filled-toastmasters-open-graph.png",
         width: 1200,
         height: 630,
         alt: "About Heart Filled Toastmasters",

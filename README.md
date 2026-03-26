@@ -5,12 +5,19 @@ A modern, professional website for HeartFilled Toastmasters club built with Next
 ## 🌟 Features
 
 ### Core Features
+
 - **📱 Responsive Design** - Mobile-first, works on all devices
 - **⚡ Server-Side Rendering** - Fast page loads with Next.js 16
 - **🎨 Modern UI** - Clean, professional design with Tailwind CSS
 - **📍 Interactive Map** - Mapbox integration for club location
+- **📈 Observability** - Vercel Analytics + Speed Insights instrumentation
+
+## 📝 Recent Updates
+
+See [CHANGELOG.md](./CHANGELOG.md) for the latest UI and maintenance updates.
 
 ### Contact Form System
+
 - **🤖 Bot Protection** - Dual-layer protection:
   - Honeypot field for simple bots
   - Cloudflare Turnstile for advanced bot detection
@@ -23,6 +30,7 @@ A modern, professional website for HeartFilled Toastmasters club built with Next
 - **📝 Metadata Tracking** - Captures IP, user agent, submission ID
 
 ### Pages
+
 - **Home** - Hero section, testimonials, club highlights
 - **About** - Club information and mission
 - **Contact** - Advanced contact form with multi-step validation
@@ -31,12 +39,14 @@ A modern, professional website for HeartFilled Toastmasters club built with Next
 ## 🛠️ Tech Stack
 
 ### Framework & Core
+
 - **Next.js 16** (App Router)
 - **React 19**
 - **TypeScript**
 - **Tailwind CSS 4**
 
 ### Libraries & Services
+
 - **Resend** - Email delivery service
 - **React Email** - Email templating
 - **Cloudflare Turnstile** - Bot protection
@@ -55,17 +65,20 @@ A modern, professional website for HeartFilled Toastmasters club built with Next
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
+
 ```bash
 git clone <repository-url>
 cd heartfilled-tm-website
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Set Up Environment Variables
+
 Create a `.env.local` file in the root directory:
 
 ```env
@@ -86,10 +99,12 @@ FROM_EMAIL=noreply@yourdomain.com  # or onboarding@resend.dev for testing
 ```
 
 **See detailed setup guides:**
+
 - 📧 Email setup: [RESEND_SETUP.md](./RESEND_SETUP.md)
 - 🔐 For other services, see **Environment Variables** section below
 
 ### 4. Run Development Server
+
 ```bash
 npm run dev
 ```
@@ -97,6 +112,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ### 5. Build for Production
+
 ```bash
 npm run build
 npm start
@@ -105,11 +121,13 @@ npm start
 ## 🔐 Environment Variables Setup
 
 ### Mapbox Token
+
 1. Sign up at [mapbox.com](https://mapbox.com)
 2. Create a new access token
 3. Add to `NEXT_PUBLIC_MAPBOX_TOKEN`
 
 ### Google Sheets Webhook
+
 1. Create a Google Sheet for storing leads
 2. Go to **Extensions > Apps Script**
 3. Create a webhook script that accepts POST requests
@@ -117,11 +135,12 @@ npm start
 5. Add to `GOOGLE_SHEET_WEBHOOK`
 
 **Example Google Apps Script:**
+
 ```javascript
 function doPost(e) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const data = JSON.parse(e.postData.contents);
-  
+
   sheet.appendRow([
     data.submissionId,
     data.submittedAt,
@@ -132,15 +151,17 @@ function doPost(e) {
     data.referralSource,
     data.about,
     data.ip,
-    data.userAgent
+    data.userAgent,
   ]);
-  
-  return ContentService.createTextOutput(JSON.stringify({success: true}))
-    .setMimeType(ContentService.MimeType.JSON);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ success: true }),
+  ).setMimeType(ContentService.MimeType.JSON);
 }
 ```
 
 ### Cloudflare Turnstile
+
 1. Sign up at [cloudflare.com](https://cloudflare.com)
 2. Go to **Turnstile** section
 3. Create a new site
@@ -148,9 +169,11 @@ function doPost(e) {
 5. Copy **Secret Key** → `TURNSTILE_SECRET`
 
 ### Resend Email
+
 **See complete guide: [RESEND_SETUP.md](./RESEND_SETUP.md)**
 
 Quick setup:
+
 1. Sign up at [resend.com](https://resend.com)
 2. Create API key → `RESEND_API_KEY`
 3. Set admin email → `ADMIN_EMAIL`
@@ -193,7 +216,9 @@ heartfilled-tm-website/
 ## 🎯 Key Components
 
 ### ContactForm (`components/ContactForm.tsx`)
+
 Advanced contact form with:
+
 - Client-side validation
 - Honeypot trap
 - Turnstile challenge
@@ -201,7 +226,9 @@ Advanced contact form with:
 - Auto-reset on success
 
 ### SubmitContact (`app/actions/submitContact.ts`)
+
 Server action that:
+
 1. Validates honeypot
 2. Verifies Turnstile token
 3. Validates field lengths
@@ -211,7 +238,9 @@ Server action that:
 7. Returns success/error
 
 ### Email Templates (`emails/`)
+
 Professional email templates:
+
 - **UserConfirmation** - Personalized thank you message
 - **AdminNotification** - Comprehensive lead details
 
@@ -265,12 +294,14 @@ Return success → Show toast → Reset form
 ## 📧 Email System
 
 ### User Confirmation Email
+
 - Personalized greeting
 - Professional design
 - Mobile-responsive
 - Clear messaging
 
 ### Admin Notification Email
+
 - All lead information
 - Color-coded sections
 - Contact details highlighted
@@ -278,6 +309,7 @@ Return success → Show toast → Reset form
 - Links to Google Sheets
 
 **Rate Limits (Resend Free Tier):**
+
 - 100 emails/day
 - 3,000 emails/month
 - 2 emails per form submission = 50 leads/day
@@ -285,19 +317,24 @@ Return success → Show toast → Reset form
 ## 🚀 Deployment
 
 ### Deploy to Vercel (Recommended)
+
 1. Push code to GitHub
 2. Import project in [Vercel](https://vercel.com)
 3. Add environment variables in project settings
 4. Deploy!
 
 ### Environment Variables for Production
+
 Make sure to add all environment variables from `.env.local` to your production environment:
+
 - Vercel: Project Settings → Environment Variables
 - Add each variable individually
 - Redeploy after adding variables
 
 ### Custom Domain Setup (Resend)
+
 For production emails:
+
 1. Add your domain in Resend dashboard
 2. Add DNS records (SPF, DKIM, DMARC)
 3. Verify domain
@@ -306,6 +343,7 @@ For production emails:
 ## 🧪 Testing
 
 ### Test Contact Form Locally
+
 1. Start dev server: `npm run dev`
 2. Navigate to `/contact`
 3. Fill form with your email
@@ -316,6 +354,7 @@ For production emails:
 8. Verify entry in Google Sheets
 
 ### Test Checklist
+
 - [ ] Form validation works
 - [ ] Turnstile challenge appears
 - [ ] Honeypot catches bots
@@ -328,22 +367,26 @@ For production emails:
 ## 🐛 Troubleshooting
 
 ### Emails Not Sending
+
 - Check `RESEND_API_KEY` is correct
 - Restart dev server after changing env vars
 - Check Resend dashboard for errors
 - Verify rate limits not exceeded
 
 ### Turnstile Not Working
+
 - Check `NEXT_PUBLIC_TURNSTILE_SITE_KEY` is correct
 - Verify `TURNSTILE_SECRET` is correct
 - Check domain is allowed in Turnstile settings
 
 ### Google Sheets Not Updating
+
 - Test webhook URL with Postman/curl
 - Check Apps Script deployment is accessible to "Anyone"
 - Verify webhook URL in environment variables
 
 ### Map Not Loading
+
 - Check `NEXT_PUBLIC_MAPBOX_TOKEN` is set
 - Verify token has correct permissions
 - Check browser console for errors
@@ -376,6 +419,7 @@ Private project - All rights reserved.
 ## 🆘 Support
 
 For issues or questions:
+
 1. Check [RESEND_SETUP.md](./RESEND_SETUP.md) for email issues
 2. Review this README for setup questions
 3. Contact project maintainer

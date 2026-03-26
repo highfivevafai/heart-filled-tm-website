@@ -11,11 +11,9 @@ const normalizeBaseUrl = (value: string) => {
 };
 
 const resolveBaseUrl = () => {
-  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
-  const vercelProduction = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  const vercelPreview = process.env.VERCEL_URL;
+  const explicit = process.env.SEO_BASE_URL;
 
-  const source = explicit || vercelProduction || vercelPreview || FALLBACK_BASE_URL;
+  const source = explicit || FALLBACK_BASE_URL;
   return normalizeBaseUrl(source);
 };
 

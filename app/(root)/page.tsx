@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/open-graph-heart-filled-tm.png",
+        url: "/heart-filled-toastmasters-open-graph.png",
         width: 1200,
         height: 630,
         alt: "Heart Filled Toastmasters club members in Woodland Hills, California",
@@ -47,7 +47,7 @@ const localBusinessSchema = {
   additionalType: "https://schema.org/SocialClub",
   name: siteConfig.name,
   url: siteConfig.baseUrl,
-  image: toAbsoluteUrl("/open-graph-heart-filled-tm.png"),
+  image: toAbsoluteUrl("/heart-filled-toastmasters-open-graph.png"),
   email: siteConfig.email,
   areaServed: "San Fernando Valley",
   address: {
