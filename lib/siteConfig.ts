@@ -1,4 +1,4 @@
-const FALLBACK_BASE_URL = "https://heart-filled-tm-website.vercel.app";
+const FALLBACK_BASE_URL = "https://heartfilledtoastmasters.com";
 
 const normalizeBaseUrl = (value: string) => {
   const trimmed = value.trim().replace(/\/+$/, "");
