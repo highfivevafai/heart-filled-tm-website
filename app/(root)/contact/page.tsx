@@ -30,21 +30,13 @@ export const metadata: Metadata = {
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
+  "@id": `${siteConfig.baseUrl}/contact/#contactpage`,
   name: `Contact ${siteConfig.name}`,
   url: `${siteConfig.baseUrl}/contact`,
   description:
     "Contact page for Heart Filled Toastmasters in Woodland Hills, California.",
   mainEntity: {
-    "@type": "Organization",
-    name: siteConfig.name,
-    email: siteConfig.email,
-    url: siteConfig.baseUrl,
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: siteConfig.email,
-      contactType: "customer support",
-      availableLanguage: ["English"],
-    },
+    "@id": `${siteConfig.baseUrl}/#organization`,
   },
 };
 
@@ -117,7 +109,7 @@ const ContactPage = () => {
               <CalendarIcon className="h-8 w-8 text-gray-700" />
             </div> 
             <h2 className="text-xl font-bold mb-2">Date & Time</h2>
-            <p className="text-gray-600 mb-4">Thursdays 7:00PM - 8:30PM</p>
+            <p className="text-gray-600 mb-4">Thursdays 7:00 PM - 8:30 PM</p>
           </div>
           <div className="relative border border-slate-300 p-8 text-center">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-6 bg-slate-50 px-2 py-2">

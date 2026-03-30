@@ -39,6 +39,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteConfig.baseUrl}/#organization`,
   name: siteConfig.name,
   url: siteConfig.baseUrl,
   email: siteConfig.email,

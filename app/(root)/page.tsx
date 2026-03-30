@@ -44,9 +44,13 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": `${siteConfig.baseUrl}/#localbusiness`,
   additionalType: "https://schema.org/SocialClub",
   name: siteConfig.name,
   url: siteConfig.baseUrl,
+  parentOrganization: {
+    "@id": `${siteConfig.baseUrl}/#organization`,
+  },
   image: toAbsoluteUrl("/heart-filled-toastmasters-open-graph.png"),
   email: siteConfig.email,
   areaServed: "San Fernando Valley",
@@ -77,7 +81,7 @@ const HomePage = () => {
     },
     {
       title: "What is the time commitment?",
-      content: "Our meetings are held every Thursday from 7:00 to 8:30 PM. Many members spend an extra hour or more per week preparing speeches or working on Pathways projects, but the time is completely up to you - you get out what you put in."
+      content: "Our meetings are held every Thursday from 7:00 PM to 8:30 PM. Many members spend an extra hour or more per week preparing speeches or working on Pathways projects, but the time is completely up to you - you get out what you put in."
     },
     {
       title: "How diverse is the club membership?",

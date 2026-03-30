@@ -50,6 +50,7 @@ export const metadata: Metadata = {
 const weeklyMeetingEventSchema = {
   "@context": "https://schema.org",
   "@type": "Event",
+  "@id": `${siteConfig.baseUrl}/visit-our-club/#weekly-event`,
   name: "Heart Filled Toastmasters Weekly Meeting",
   description:
     "Weekly Toastmasters meeting focused on public speaking, communication, and leadership development.",
@@ -57,22 +58,10 @@ const weeklyMeetingEventSchema = {
   eventStatus: "https://schema.org/EventScheduled",
   image: [toAbsoluteUrl("/heart-filled-toastmasters-open-graph.png")],
   organizer: {
-    "@type": "Organization",
-    name: siteConfig.name,
-    url: siteConfig.baseUrl,
-    email: siteConfig.email,
+    "@id": `${siteConfig.baseUrl}/#organization`,
   },
   location: {
-    "@type": "Place",
-    name: siteConfig.location.venue,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.location.streetAddress,
-      addressLocality: siteConfig.location.city,
-      addressRegion: siteConfig.location.region,
-      postalCode: siteConfig.location.postalCode,
-      addressCountry: siteConfig.location.country,
-    },
+    "@id": `${siteConfig.baseUrl}/#localbusiness`,
   },
   eventSchedule: {
     "@type": "Schedule",
@@ -89,7 +78,7 @@ const VisitOurClubPage = () => {
   const faqs = [
     {
       title: "Is the club online or in-person?",
-      content: "Our club meets in person most Thursdays from 7:00 to 8:30 PM, with one online meeting per month via Zoom. This gives members the flexibility to join from anywhere while keeping our meetings engaging and supportive, just like in-person sessions."
+      content: "Our club meets in person most Thursdays from 7:00 PM to 8:30 PM, with one online meeting per month via Zoom. This gives members the flexibility to join from anywhere while keeping our meetings engaging and supportive, just like in-person sessions."
     },
     {
       title: "Will I have to speak at my first meeting?",
@@ -199,7 +188,7 @@ const VisitOurClubPage = () => {
                 <ClockIcon className="h-8 w-8 text-gray-700" />
               </div> 
               <h2 className="text-xl font-bold mb-2">Meeting Time</h2>
-              <p className="text-gray-600 mb-4">Every Thursday<br /> 7:30 PM - 8:30 PM PST</p>
+              <p className="text-gray-600 mb-4">Every Thursday<br /> 7:00 PM - 8:30 PM PST</p>
             </div>
             <div className="relative border border-slate-300 p-8 text-center">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-6 bg-white px-2 py-2">
